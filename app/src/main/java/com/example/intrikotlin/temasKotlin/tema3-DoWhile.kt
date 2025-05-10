@@ -6,4 +6,6 @@ fun main(){
         println("$numero1")
         numero1++
     }while(numero1<10)
+
+
 }

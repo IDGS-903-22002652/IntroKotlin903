@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-
+    /*implementation(com.github.pemistahl:lingua:1.3.0) // Última versión estable*/
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
