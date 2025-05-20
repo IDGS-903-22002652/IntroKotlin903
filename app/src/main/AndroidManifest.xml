@@ -13,10 +13,14 @@
         android:theme="@style/Theme.IntriKotlin"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.IntriKotlin">
+            android:name=".cinepolis.CinepolisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practica2.OperasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
