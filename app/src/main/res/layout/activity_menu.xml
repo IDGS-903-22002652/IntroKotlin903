@@ -1,28 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="16dp"
     tools:context=".MenuActivity">
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="Opciones"
         android:textSize="28sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
 
     <Button
         android:id="@+id/btnOperas"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:text="Operaciones Basicas" />
+        android:text="Operaciones Básicas"
+        android:layout_marginBottom="16dp" />
 
+    <Button
+        android:id="@+id/btnCinepolis"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Cinépolis"
+        android:layout_marginBottom="16dp" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btnPractica1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Practica 1"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnEjemplo3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Practica 3"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnArchivos"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Archivos"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

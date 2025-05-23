@@ -2,7 +2,144 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/clCinepolis"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cinepolis.CinepolisActivity"/>
+    android:padding="16dp"
+    tools:context=".practica2.">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Logo Cinépolis"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cinepolis" />
+
+    <!-- Campo: Nombre -->
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintStart_toEndOf="@id/tvNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!-- Campo: Número de Compradores -->
+    <TextView
+        android:id="@+id/tvCompradores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de Compradores:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etCompradores"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Ej: 2"
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintStart_toEndOf="@id/tvCompradores"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!-- Campo: Tarjeta Cineco -->
+    <TextView
+        android:id="@+id/tvTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Tarjeta Cineco?"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etCompradores"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/rgTarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/etCompradores"
+        app:layout_constraintStart_toEndOf="@id/tvTarjeta"
+        android:layout_marginStart="8dp">
+
+        <RadioButton
+            android:id="@+id/rbSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sí" />
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvBoletos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad de Boletos:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/rgTarjeta"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etBoletos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Ej: 4"
+        app:layout_constraintTop_toBottomOf="@id/rgTarjeta"
+        app:layout_constraintStart_toEndOf="@id/tvBoletos"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boletos a Pagar:\n$0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/etBoletos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        app:layout_constraintTop_toBottomOf="@id/tvResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
