@@ -52,4 +52,11 @@
         android:text="Archivos"
         android:layout_marginBottom="16dp" />
 
+    <Button
+        android:id="@+id/btnDiccionario"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Diccionario"
+        android:layout_marginBottom="16dp" />
+
 </LinearLayout>

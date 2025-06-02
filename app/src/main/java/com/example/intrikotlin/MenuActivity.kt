@@ -12,6 +12,7 @@ import com.example.intrikotlin.cinepolis.CinepolisActivity
 import com.example.intrikotlin.practica1.saludoActivity
 import com.example.intrikotlin.practica3.ejemplo3Activity
 import com.example.intrikotlin.practica4.ArchivosActivity
+import com.example.intrikotlin.diccionario.Diccionario
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,12 +25,16 @@ class MenuActivity : AppCompatActivity() {
         val btnPractica1 = findViewById<Button>(R.id.btnPractica1)
         val btnEjemplo3 = findViewById<Button>(R.id.btnEjemplo3)
         val btnArchivos = findViewById<Button>(R.id.btnArchivos)
+        val btnDiccionario = findViewById<Button>(R.id.btnDiccionario)
+
 
         btnOperas.setOnClickListener { navegateToOperas() }
         btnCinepolis.setOnClickListener { navegateToCinepolis() }
         btnPractica1.setOnClickListener { navegateToPractica1() }
         btnEjemplo3.setOnClickListener { navegateToEjemplo3() }
         btnArchivos.setOnClickListener { navegateToArchivos() }
+        btnDiccionario.setOnClickListener { navegateToDiccionario() }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -55,6 +60,10 @@ class MenuActivity : AppCompatActivity() {
     }
     private fun navegateToArchivos() {
         val intent = Intent(this, ArchivosActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navegateToDiccionario(){
+        val intent =Intent(this, Diccionario::class.java)
         startActivity(intent)
     }
 }
